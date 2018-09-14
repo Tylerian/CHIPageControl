@@ -60,6 +60,13 @@ import UIKit
         }
     }
     
+    @IBInspectable open var currentRadius: CGFloat? {
+        didSet {
+            setNeedsLayout()
+            update(for: progress)
+        }
+    }
+    
     @IBInspectable open var inactiveTransparency: CGFloat = 0.4 {
         didSet {
             setNeedsLayout()
